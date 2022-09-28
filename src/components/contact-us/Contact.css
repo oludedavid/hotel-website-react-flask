@@ -1,0 +1,8 @@
+.contact {
+  height: calc(100vh / 2);
+  width: 100vw;
+  background-color: yellow;
+  scroll-behavior: smooth;
+  scroll-snap-type: y mandatory;
+  scroll-snap-align: start;
+}

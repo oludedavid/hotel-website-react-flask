@@ -1,0 +1,127 @@
+.mainContainer {
+  position: relative;
+  width: 100vw;
+  height: 100vh;
+  scroll-behavior: smooth;
+  scroll-snap-type: y mandatory;
+  scroll-snap-align: start;
+}
+
+/* Center the div */
+.introText {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  max-width: 50%;
+  text-align: center;
+  color: #eeeeee;
+  backface-visibility: hidden;
+}
+
+.introText h2 {
+  font-size: 70px;
+  font-style: italic;
+  line-height: 1.5;
+  font-weight: 900;
+  letter-spacing: 3px;
+  margin-top: 5px;
+
+  animation-name: moveInFromLeft;
+  animation-duration: 1s;
+  animation-timing-function: ease-out;
+}
+
+.introText h2 strong {
+  color: wheat;
+}
+.introText p {
+  line-height: 1;
+  font-style: oblique;
+  font-weight: 400;
+  font-size: 1.4rem;
+  letter-spacing: 3px;
+  margin-top: 80px;
+  animation-name: moveInFromRight;
+  animation-duration: 1s;
+  animation-timing-function: ease-out;
+}
+
+.introText p strong {
+  color: wheat;
+}
+
+.about-us-btn {
+  display: inline-block;
+  border: 3px solid wheat;
+  background-color: wheat;
+  padding: 10px;
+  margin-top: 50px;
+  font-size: 20px;
+  border-radius: 10px;
+  width: 150px;
+  font-weight: 400;
+}
+
+.btn-mover {
+  animation: moveInFromBottom 1s ease-out;
+}
+.about-us-btn:hover {
+  font-size: 23px;
+  color: #eeeeee;
+  transition: 0.5s;
+}
+/* Animation  */
+@keyframes moveInFromLeft {
+  /* zero percent is when the animation start */
+  0% {
+    opacity: 0;
+    transform: translateX(-100px);
+  }
+  80% {
+    transform: translateX(10px);
+  }
+  /* 100 percent is when it stops */
+  100% {
+    opacity: 1;
+    transform: translate(0);
+  }
+}
+
+@keyframes moveInFromRight {
+  /* zero percent is when the animation start */
+  0% {
+    opacity: 0;
+    transform: translateX(100px);
+  }
+  80% {
+    transform: translateX(-10px);
+  }
+  /* 100 percent is when it stops */
+  100% {
+    opacity: 1;
+    transform: translate(0);
+  }
+}
+
+@keyframes moveInFromBottom {
+  0% {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+
+  100% {
+    opacity: 1;
+    transform: translate(0);
+  }
+}
+
+@keyframes borderBlink {
+  from,
+  to {
+    border-color: transparent;
+  }
+  50% {
+    border-color: #ff1e1e;
+  }
+}
